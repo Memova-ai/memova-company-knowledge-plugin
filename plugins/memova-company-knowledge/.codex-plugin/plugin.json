@@ -1,7 +1,7 @@
 {
   "name": "memova-company-knowledge",
-  "version": "0.4.11",
-  "description": "Onboard to, query, and explicitly submit Memova's internal company knowledge with server-enforced identity, access control, provenance, and freshness.",
+  "version": "0.5.0",
+  "description": "Onboard to, query, explicitly submit, and capture durable completed-task outcomes in Memova's internal company knowledge with server-enforced identity, access control, provenance, and freshness.",
   "author": {
     "name": "Memova",
     "url": "https://memova.ai"
@@ -20,7 +20,7 @@
   "interface": {
     "displayName": "公司知识助手",
     "shortDescription": "查询有权限访问的公司公共知识，并返回可追溯引用与快照状态。",
-    "longDescription": "通过独立的公司知识 MCP 完成入职自检，查询 SharePoint Published Knowledge，并在员工显式触发、选择证据、审阅预览和最终确认后直接发布知识与 SubmissionReceipt。Plugin 只负责统一入口和工作流路由；身份、权限、岗位映射、审计、发布门禁、引用、冲突和新鲜度均由服务端执行。",
+    "longDescription": "通过独立的公司知识 MCP 完成入职自检、查询 SharePoint Published Knowledge、显式发布知识，并在重大任务真正完成时自动准备最小知识预览。员工仍只需对完整服务器预览确认一次；身份、权限、审计、发布门禁、引用、冲突和新鲜度均由服务端执行。",
     "developerName": "Memova",
     "category": "Productivity",
     "capabilities": [

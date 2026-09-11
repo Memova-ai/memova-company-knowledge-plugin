@@ -4,11 +4,13 @@ This is the independent, thin Plugin package for the Memova Company Knowledge Pl
 authoritative product decisions remain in the Obsidian Master PRD; this directory is a derived
 installable artifact.
 
-The package contains separate universal-query, explicit onboarding/self-check, and explicit
-current-task submission Skills plus the dedicated `company_knowledge_assistant` MCP declaration.
-It intentionally contains no authentication code, tokens, employee or job allowlists, server
-policy, retrieval implementation, third-party connector, Hook, background collector, custom UI, or
-Memova product endpoint.
+The package contains separate universal-query, onboarding/self-check, explicit current-task
+submission, and substantial-task completion-capture Skills plus the dedicated
+`company_knowledge_assistant` MCP declaration. It contains no authentication code, tokens,
+employee or job allowlists, server policy, retrieval implementation, third-party connector,
+SharePoint crawler, custom UI, or Memova product endpoint. Its single local `SessionEnd` Hook saves
+only a private transcript pointer for later semantic review; it performs no network call or
+publication.
 
 S10-03 adds the general P0 submission Skill. It starts only from an explicit employee request,
 assesses at most three current-task candidates, routes each fact to one of seven receipt types, and
@@ -79,10 +81,18 @@ query Skill no longer expands a question with guessed code, test, deployment, or
 and it sends conversation/parent identifiers only as a valid pair. The server classifies natural
 completion and ETA wording, keeps business status additive to delivery facets, and uses inferred
 receipt routes as evidence priorities instead of destructive search filters. The current manifest
-is `0.4.11`, which also restores the three supported starter prompts and the official repository link; OAuth bootstrap remains unchanged from
+was `0.4.11`, which also restored the three supported starter prompts and the official repository link; OAuth bootstrap remains unchanged from
 `0.4.1`, current-task status and general-knowledge provenance remain server-owned, submit identity
 stays bound to the prepared candidate, and only the final server preview requires a publication
 confirmation.
+
+Version `0.5.0` adds P1 completion capture. When a substantial task has genuinely produced a stable
+decision, verified delivery, resolved incident, finalized document/meeting result, or reusable
+method, Codex performs a quiet semantic and duplicate check. A qualifying candidate may create one
+30-minute server preview automatically, but durable publication still requires the employee's one
+confirmation of that exact preview. Ordinary questions, intermediate work, duplicate facts,
+restricted material and failed investigations remain silent `NO_SUBMIT` paths. The local
+`SessionEnd` Hook is fallback bookkeeping only and never uploads the transcript or calls MCP.
 
 Validate locally from the repository root:
 
