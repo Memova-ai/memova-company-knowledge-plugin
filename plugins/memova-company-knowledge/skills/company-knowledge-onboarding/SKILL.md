@@ -67,7 +67,7 @@ Run this before evaluating gates because the host can hide protected tools befor
 
 ## Employee readiness — default, read-only
 
-1. Verify Plugin `0.4.11` or newer, a fresh conversation, and the exact seven tool names. Presence
+1. Verify Plugin `0.5.0` or newer, a fresh conversation, and the exact seven tool names. Presence
    is checked without calling write tools.
 2. Call `get_profile` once. Treat the delegated Microsoft token plus the server's active employee
    directory resolution as authoritative. Show the safe UPN/display name for transparency, but do

@@ -1,0 +1,16 @@
+{
+  "description": "Local-only ended-session fallback for company knowledge completion capture.",
+  "hooks": {
+    "SessionEnd": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"$PLUGIN_ROOT/hooks/session_end_checkpoint.py\"",
+            "timeout": 3
+          }
+        ]
+      }
+    ]
+  }
+}

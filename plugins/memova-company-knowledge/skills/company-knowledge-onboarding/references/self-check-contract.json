@@ -1,6 +1,6 @@
 {
   "contract_version": "1.6",
-  "plugin_version": "0.4.11",
+  "plugin_version": "0.5.0",
   "mcp_server": "company_knowledge_assistant",
   "required_tools": [
     "get_profile",
